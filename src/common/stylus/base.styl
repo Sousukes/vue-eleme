@@ -1,0 +1,33 @@
+/*
+ * @Author: saya.lizy 
+ * @Date: 2017-10-11 18:09:42 
+ * @Last Modified by: saya.lizy
+ * @Last Modified time: 2017-10-17 12:53:00
+ */
+
+body, html
+    line-height 1
+    font-weight 200
+    font-family 'PingFang SC','STHeitiSC-Light','Helvetica-Light',Arial, Helvetica, sans-serif
+
+.clearfix
+    display inline-block
+    &:after
+        display block
+        content "."
+        height 0
+        line-height 0
+        clear both
+        visibility hidden
+
+@media(-webkit-min-device-width-pixel-ratio: 1.5),(min-device-width-pixel-ratio: 1.5)
+    .border-1px
+        &::after
+            -webkit-transform scaleY(0.7)
+            transform scaleY(0.7)
+
+@media(-webkit-min-device-width-pixel-ratio: 2),(min-device-width-pixel-ratio: 2)
+    .border-1px
+        &::after
+            -webkit-transform scaleY(0.5)
+            transform scaleY(0.5)
